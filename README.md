@@ -36,6 +36,7 @@ Leonhard Euler demonstrou o teorema de Euclides apoiando-se no teorema fundament
 
 > ***Cada número tem uma única fatorização prima.***
 
+Se cada número tem uma fatorização prima única, desenvolvemos uma função que encontra todos os fatores primos do número inteiro passado como argumento.
 
 ``` {.python}
 #Python 3 script to calculate prime factors of N

@@ -66,7 +66,7 @@ def factorization(number):
 
 ``` {.python}
 from time import time
-inicio = time()
+startTime = time()
 
 number = 1024
 result = factorization(number)
@@ -74,8 +74,8 @@ result = factorization(number)
 if (result != None):
     print("Prime factors of " + str(number) + ":", ", ".join(result))
 
-fim = time()
-print("\n⏱️ Runtime: " + str(fim - inicio)[:7] + " seconds.")
+endTime = time()
+print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
 ```
 Output:
 
@@ -111,15 +111,15 @@ def isPrime(number):
 
 ``` {.python}
 from time import time
-inicio = time()
+startTime = time()
 
 number = 97
 result = isPrime(number)
 if (result != None):
     print("The number " + str(number) + " is", 'prime.' if isPrime(number) else 'not prime.')
 
-fim = time()
-print("\n⏱️ Runtime: " + str(fim - inicio)[:7] + " seconds.")
+endTime = time()
+print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
 ```
 Output:
 
@@ -153,15 +153,15 @@ def goldbach(number):
 ```
 ``` {.python}
 from time import time
-inicio = time()
+startTime = time()
 
 number = 14
 result = goldbach(number)
 if (result != None):
     print("The number " + str(number) + " is the result of the sum (of the primes) " + str(result[0]) + " + " + str(result[1]) + '.')
 
-fim = time()
-print("\n⏱️ Runtime: " + str(fim - inicio)[:7] + " seconds.")
+endTime = time()
+print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
 ```
 Output:
 
@@ -296,15 +296,15 @@ def fourPrimes(number):
 ```
 ``` {.python}
 from time import time
-inicio = time()
+startTime = time()
 
 number = 5252694
 result = fourPrimes(number)
 if (result != None):
     print("The number " + str(number) + " is the result of the sum (of the primes)" , " + ".join(result))
 
-fim = time()
-print("\n⏱️ Runtime: " + str(fim - inicio)[:7] + " seconds.")
+endTime = time()
+print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
 
 ```
 Output:

@@ -24,6 +24,8 @@ def factorization(number):
 
     return factors
 
+##############################################################################################################
+
 startTime = time()
 
 number = 1024
@@ -34,6 +36,8 @@ if (result != None):
 
 endTime = time()
 print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
+
+##############################################################################################################
 
 #Python 3 script that determines the primality of a number
 def isPrime(number):
@@ -47,7 +51,9 @@ def isPrime(number):
         return True
     else:
         return False
-      
+
+##############################################################################################################
+    
 startTime = time()
 
 number = 97
@@ -57,6 +63,8 @@ if (result != None):
 
 endTime = time()
 print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
+
+##############################################################################################################
 
 #Python 3 script to find two primes that add up to N, for N even
 def goldbach(number):
@@ -75,6 +83,7 @@ def goldbach(number):
         if (portion == 2): portion += 1
         else: portion += 2
           
+##############################################################################################################
         
 startTime = time()
 
@@ -86,12 +95,16 @@ if (result != None):
 endTime = time()
 print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
 
+##############################################################################################################
+
 def fork(number):
     if (number % 2 == 0):
         return int(number/2), int(number/2)
     else:
         return int(number/2 - 0.5), int(number/2 + 0.5)
-      
+
+##############################################################################################################
+
 #Python 3 script to find 4 prime parcels that add up to a number
 def fourPrimes(number):
 
@@ -130,7 +143,9 @@ def fourPrimes(number):
         prime3, prime4 = goldbach(evenParcel)
             
     return [str(prime1), str(prime2), str(prime3), str(prime4)]
-  
+ 
+##############################################################################################################
+
 startTime = time()
 
 number = 5252694
@@ -140,3 +155,5 @@ if (result != None):
 
 endTime = time()
 print("\n⏱️ Runtime: " + str(endTime - startTime)[:7] + " seconds.")
+
+##############################################################################################################

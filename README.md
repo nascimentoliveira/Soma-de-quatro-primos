@@ -40,7 +40,6 @@ Se cada número tem uma fatorização prima única, desenvolvemos uma função q
 
 ``` {.python}
 #Python 3 script to calculate prime factors of N
-
 def factorization(number):
 
     #unexpected parameter

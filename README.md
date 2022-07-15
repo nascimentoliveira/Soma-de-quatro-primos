@@ -155,7 +155,7 @@ inicio = time()
 number = 14
 result = goldbach(number)
 if (result != None):
-    print("The number " + str(number) + " is the result of the sum with the primes " + str(result[0]) + " + " + str(result[1]) + '.')
+    print("The number " + str(number) + " is the result of the sum (of the primes) " + str(result[0]) + " + " + str(result[1]) + '.')
 
 fim = time()
 print("\n⏱️ Runtime: " + str(fim - inicio)[:7] + " seconds.")
@@ -163,7 +163,7 @@ print("\n⏱️ Runtime: " + str(fim - inicio)[:7] + " seconds.")
 Output:
 
 ``` {.python}
-The number 14 is the result of the sum with the primes 3 + 11.
+The number 14  is the result of the sum (of the primes) 3 + 11.
 
 ⏱️ Runtime: 0.00198 seconds.
 ```
@@ -187,6 +187,7 @@ Então, vamos transformar $N$ em duas parcelas quaisquer de uma soma!
 >2. duas parcelas ímpares.
 
 >Agora, se $N$ é ímpar, não há outra alternativa a ter:
+>
 >3. uma parcela ímpar e uma parcela par.
 
 No caso **1** basta aplicarmos a conjectura de Goldbach e encontrar os dois primos para a primeira parcela par e os dois últimos primos da segunda parcela par.
@@ -208,12 +209,11 @@ $N = [\text{parcela par}] + [\text{parcela par}]$
 
 $N = [\text{parcela primo} + \text{parcela primo}] + [\text{parcela primo} + \text{parcela primo}]$
 
-
 A situação **3** requer uma reflexão maior. Temos um número $N$ ímpar que obrigatoriamente tem que ser transformado em uma soma com um fator ímpar e outro par. Olhando pelo lado positivo, já temos uma parcela par, se aplicarmos a função *goldbach* nessa parcela, teremos duas parcelas primos. Mas, e a outra parcela ímpar? 
 
 $N = \text{parcela ímpar} + \text{parcela par}$
 
-Novamente, um número ímpar só pode ser tranformado na soma de uma parcela ímpar com uma par. Mas o único primo par que existe é o $2$. Logo, já conhecemos a primeira parcela primo deste número. A ideia é a seguinte: fixamos a primeira parcela primo, o $2$, o que restou desta parte da primeira divisão é um número ímpar. Vamos retirar 2 unidades dessa 'parcela impar' gerando outra parcela ímpar, duas unidades menor, e tranferindo para a parcela par, gerando outra parcela par, 2 unidades maior.
+Novamente, um número ímpar só pode ser tranformado na soma de uma parcela ímpar com uma par. Mas o único primo par que existe é o $2$. Logo, já conhecemos a primeira parcela primo deste número. A ideia é a seguinte: fixamos a primeira parcela primo, o $2$, e o que restou desta parte da primeira divisão, que é um número ímpar. Vamos retirar 2 unidades dessa parcela impar gerando outra parcela ímpar, duas unidades menor, e tranferindo para a parcela par, gerando outra parcela par, 2 unidades maior.
 
 $N = \text{parcela ímpar} + \text{parcela par}$
 
@@ -225,12 +225,11 @@ $N = 2 + \text{parcela ímpar} + \text{parcela par}$
 
 ... 
 
-Isso se repetirá até que, eventualmente, a parcela ímpar se torne uma parcela prima, e então paramos a tranferência de 2 unidades. Ao final, aplicamos a função *goldbach* na parcela par restante para alcançarmos as 4 parcelas primo.
+Isso se repetirá até que, eventualmente, a parcela ímpar se torne uma parcela primo, e então paramos a tranferência de 2 unidades de uma parcela para outra. Ao final, aplicamos a função de goldbach na parcela par restante para alcançarmos as 4 parcelas primo.
 
 $N = 2 + \text{parcela primo} + [\text{parcela par}]$
 
 $N = 2 + \text{parcela primo} + [\text{parcela primo} + \text{parcela primo}]$
-
 
 
 No nosso algoritmo, a primeira divisão de parcelas ocorre na metade de $N$.
@@ -239,7 +238,7 @@ $N = N/2 + N/2$, para $N$ par, ou
 
 $N = [N/2 - 0.5] + [N/2 + 0.5]$, para $N$ ímpar
 
-A seguir, a função fork que vai dividir o número passado como parâmetro na sua "metade".
+A seguir, a função *fork* que vai dividir o número passado como parâmetro na sua "metade".
 
 ``` {.python}
 def fork(number):
@@ -249,7 +248,7 @@ def fork(number):
         return int(number/2 - 0.5), int(number/2 + 0.5)
 ```
 
-Agora, de fato, implementamos tudo o que dscutimos:
+Agora, de fato, implementamos tudo o que discutimos:
 
 ``` {.python}
 #Python 3 script to find 4 prime parcels that add up to a number
@@ -298,7 +297,7 @@ inicio = time()
 number = 5252694
 result = fourPrimes(number)
 if (result != None):
-    print("The number " + str(number) + " is the result of the sum with the primes" , " + ".join(result))
+    print("The number " + str(number) + " is the result of the sum (of the primes)" , " + ".join(result))
 
 fim = time()
 print("\n⏱️ Runtime: " + str(fim - inicio)[:7] + " seconds.")
@@ -310,4 +309,21 @@ Output:
 The number 5252694 is the result of the sum (of the primes) 29 + 2626319 + 97 + 2626249
 
 ⏱️ Runtime: 0.00690 seconds.
+```
+# Resumo
+---
+
+Com esses algoritmos, é possível:
+
+1. Encontrar os fatores primos de um número natural; 
+2. Fazer o teste de primalidade de um número natural;
+3. Tranformar um número natural par, maior que 2, em uma soma com duas parcelas de números primos;
+4. Encontrar 4 parcelas de números primos, que quando somadas, resultam em um número natural, maior que 8;
+
+Implemente os algoritmos acima, troque os parâmetros, teste. Entenda e aprenda.
+
+---
+
+```
+"Olhos fixos no caminho, para não errar a direção."
 ```

@@ -85,6 +85,7 @@ Prime factors of 1024: 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
 
 ⏱️ Runtime: 0.00563 seconds.
 ```
+------------------------------------------------------------------------
 
 Agora que sabemos os fatores primos de qualquer número natural maior que 1, podemos determinar se ele é um número primo ou não. De maneira simplificada:
 
@@ -129,7 +130,9 @@ The number 97 is prime.
 ⏱️ Runtime: 0.00027 seconds.
 ```
 
-Agora que já sabemos os fatores primos de qualquer natural maior que 1 e conseguimos determinar se ele é primo, podemos implementar a função que transforma um número na soma de 2 números primos, como Goldbach conjecturou. Lembrando que ser par é hipótese da conjectura.
+------------------------------------------------------------------------
+
+Já sabemos os fatores primos de qualquer natural maior que 1 e conseguimos determinar se ele é primo, podemos implementar a função que transforma um número na soma de 2 números primos, como Goldbach conjecturou. Lembrando que ser par é hipótese da conjectura.
 
 ``` {.python}
 #Python 3 script to find two primes that add up to N, for N even
@@ -168,6 +171,7 @@ The number 14  is the result of the sum (of the primes) 3 + 11.
 
 ⏱️ Runtime: 0.00198 seconds.
 ```
+------------------------------------------------------------------------
 
 Enfim estamos ferramentados com tudo o que precisamos para conseguir resolver o problema principal: transformar um número natural qualquer (chamaremos de $N$), maior que 8, em uma soma de 4 números primos.
 
@@ -311,6 +315,8 @@ The number 5252694 is the result of the sum (of the primes) 29 + 2626319 + 97 + 
 
 ⏱️ Runtime: 0.00690 seconds.
 ```
+------------------------------------------------------------------------
+
 # Resumo
 ---
 

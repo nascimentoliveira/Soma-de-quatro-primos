@@ -329,7 +329,3 @@ Com esses algoritmos, é possível:
 Implemente os algoritmos acima, troque os parâmetros, teste. Entenda e aprenda.
 
 ---
-
-```
-"Olhos fixos no caminho, para não errar a direção."
-```
